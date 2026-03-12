@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLR Mineral Water Supply - Kulithalai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        water: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-pattern {
+            background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0ea5e9 100%);
+        }
+        .water-drop {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-water-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-10 h-10 text-water-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C12 2 4 10 4 15C4 19.4183 7.58172 23 12 23C16.4183 23 20 19.4183 20 15C20 10 12 2 12 2Z"/>
+                    </svg>
+                    <span class="text-2xl font-bold text-water-800">NLR Water</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-water-700 hover:text-water-900 font-medium transition">Home</a>
+                    <a href="#about" class="text-water-700 hover:text-water-900 font-medium transition">About</a>
+                    <a href="#products" class="text-water-700 hover:text-water-900 font-medium transition">Products</a>
+                    <a href="#order" class="text-water-700 hover:text-water-900 font-medium transition">Order</a>
+                    <a href="#contact" class="text-water-700 hover:text-water-900 font-medium transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-water-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-water-700 hover:text-water-900">Home</a>
+                <a href="#about" class="block py-2 text-water-700 hover:text-water-900">About</a>
+                <a href="#products" class="block py-2 text-water-700 hover:text-water-900">Products</a>
+                <a href="#order" class="block py-2 text-water-700 hover:text-water-900">Order</a>
+                <a href="#contact" class="block py-2 text-water-700 hover:text-water-900">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Pure Water, Delivered Fast in Kulithalai
+                    </h1>
+                    <p class="text-xl md:text-2xl text-water-100">
+                        Fresh, clean mineral water for your home and special occasions. Reliable daily supply you can trust.
+                    </p>
+                    <a href="#order" class="inline-block bg-white text-water-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-water-100 transition shadow-lg water-drop">
+                        Order Now
+                    </a>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-72 h-72 md:w-96 md:h-96 bg-white/20 rounded-full flex items-center justify-center">
+                            <svg class="w-48 h-48 md:w-64 md:h-64 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C12 2 4 10 4 15C4 19.4183 7.58172 23 12 23C16.4183 23 20 19.4183 20 15C20 10 12 2 12 2Z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-water-300/50 rounded-full animate-pulse"></div>
+                        <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-water-400/50 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-water-800 mb-6">About NLR Water Supply</h2>
+                <div class="w-24 h-1 bg-water-500 mx-auto mb-8"></div>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    NLR Mineral Water Supply is your trusted partner for clean, pure drinking water in Kulithalai. 
+                    We provide reliable daily water delivery for homes and comprehensive water supply solutions for 
+                    all special occasions, functions, and events. Our commitment to quality and timely delivery 
+                    ensures you never run dry when you need us most.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-water-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-water-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-water-800 mb-2">Quality Assured</h3>
+                        <p class="text-gray-600">100% pure mineral water</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-water-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-water-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-water-800 mb-2">Fast Delivery</h3>
+                        <p class="text-gray-600">Same day delivery</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-water-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-water-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-water-800 mb-2">Event Ready</h3>
+                        <p class="text-gray-600">Bulk orders for functions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 md:py-24 bg-water-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-water-800 mb-4">Our Products</h2>
+                <div class="w-24 h-1 bg-water-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Product Card 1: Regular Bottles -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-b from-water-400 to-water-600 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20">
+                            <div class="absolute top-4 left-8 w-2 h-12 bg-white rounded-full"></div>
+                            <div class="absolute top-8 right-12 w-3 h-16 bg-white rounded-full"></div>
+                            <div class="absolute bottom-8 left-16 w-2 h-8 bg-white rounded-full"></div>
+                        </div>
+                        <div class="flex items-end space-x-3 relative z-10">
+                            <!-- 300ml Bottle -->
+                            <div class="text-center">
+                                <div class="relative">
+                                    <div class="w-3 h-4 bg-white/90 mx-auto rounded-sm"></div>
+                                    <div class="w-10 h-20 bg-gradient-to-b from-white/90 via-white/70 to-blue-100/80 rounded-lg mx-auto shadow-lg border border-white/50"></div>
+                                </div>
+                                <p class="text-white text-xs font-medium mt-2">300ml</p>
+                            </div>
+                            <!-- 500ml Bottle -->
+                            <div class="text-center">
+                                <div class="relative">
+                                    <div class="w-4 h-5 bg-white/90 mx-auto rounded-sm"></div>
+                                    <div class="w-12 h-26 bg-gradient-to-b from-white/90 via-white/70 to-blue-100/80 rounded-lg mx-auto shadow-lg border border-white/50"></div>
+                                </div>
+                                <p class="text-white text-xs font-medium mt-2">500ml</p>
+                            </div>
+                            <!-- 1L Bottle -->
+                            <div class="text-center">
+                                <div class="relative">
+                                    <div class="w-5 h-6 bg-white/90 mx-auto rounded-sm"></div>
+                                    <div class="w-14 h-32 bg-gradient-to-b from-white/90 via-white/70 to-blue-100/80 rounded-lg mx-auto shadow-lg border border-white/50"></div>
+                                </div>
+                                <p class="text-white text-xs font-medium mt-2">1L</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-water-800 mb-2">Regular Water Bottles</h3>
+                        <p class="text-gray-600 mb-4">Perfect for daily hydration. Available in 300ml, 500ml, and 1 Litre sizes.</p>
+                        <ul class="space-y-2 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                300ml - Compact & Portable
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                500ml - Standard Size
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                1L - Family Size
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: 20L Water Cans -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-b from-water-500 to-water-700 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10">
+                            <div class="absolute top-6 left-10 w-3 h-20 bg-white rounded-full"></div>
+                            <div class="absolute bottom-10 right-14 w-4 h-12 bg-white rounded-full"></div>
+                        </div>
+                        <div class="text-center relative z-10">
+                            <div class="relative">
+                                <!-- Cap/Handle area -->
+                                <div class="w-16 h-6 bg-white/80 mx-auto rounded-t-lg"></div>
+                                <!-- Main can body with realistic water effect -->
+                                <div class="w-28 h-44 bg-gradient-to-b from-white/80 via-blue-50/60 to-water-200/70 rounded-b-2xl mx-auto shadow-2xl border-2 border-white/40 relative">
+                                    <!-- Water fill effect -->
+                                    <div class="absolute inset-2 bg-gradient-to-b from-water-100/50 to-water-300/40 rounded-b-xl"></div>
+                                    <!-- Highlight reflection -->
+                                    <div class="absolute left-3 top-4 w-2 h-32 bg-white/40 rounded-full"></div>
+                                    <!-- Subtle horizontal ridges -->
+                                    <div class="absolute top-12 left-0 right-0 h-px bg-white/30"></div>
+                                    <div class="absolute top-20 left-0 right-0 h-px bg-white/30"></div>
+                                    <div class="absolute top-28 left-0 right-0 h-px bg-white/30"></div>
+                                </div>
+                            </div>
+                            <p class="text-white font-bold mt-3 text-lg">20 Litres</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-water-800 mb-2">20L Water Cans</h3>
+                        <p class="text-gray-600 mb-4">Large capacity water cans perfect for home and office use. Economical and convenient.</p>
+                        <ul class="space-y-2 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                20 Litre Capacity
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Returnable & Exchangeable
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Best Value for Money
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Bulk/Event Orders -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-b from-water-600 to-water-800 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10">
+                            <div class="absolute top-8 left-6 w-2 h-10 bg-white rounded-full"></div>
+                            <div class="absolute bottom-6 right-8 w-3 h-14 bg-white rounded-full"></div>
+                            <div class="absolute top-12 right-16 w-2 h-8 bg-white rounded-full"></div>
+                        </div>
+                        <div class="text-center relative z-10">
+                            <!-- Stack of bottles representing bulk order -->
+                            <div class="flex justify-center items-end space-x-1">
+                                <div class="w-8 h-16 bg-gradient-to-b from-white/80 to-blue-100/60 rounded-lg shadow-lg border border-white/30"></div>
+                                <div class="w-8 h-20 bg-gradient-to-b from-white/80 to-blue-100/60 rounded-lg shadow-lg border border-white/30"></div>
+                                <div class="w-8 h-16 bg-gradient-to-b from-white/80 to-blue-100/60 rounded-lg shadow-lg border border-white/30"></div>
+                            </div>
+                            <!-- 20L can behind -->
+                            <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 -z-10">
+                                <div class="w-20 h-28 bg-gradient-to-b from-white/60 via-blue-50/40 to-water-200/50 rounded-b-xl shadow-lg border-2 border-white/30"></div>
+                            </div>
+                            <p class="text-white font-bold mt-4 text-lg">Events &amp; Bulk</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-water-800 mb-2">Bulk & Event Orders</h3>
+                        <p class="text-gray-600 mb-4">Planning a function, wedding, or corporate event? We've got your water supply covered!</p>
+                        <ul class="space-y-2 text-sm text-gray-500">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Weddings & Functions
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Corporate Events
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-water-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Custom Quantities
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-water-800 mb-4">Quick Order Booking</h2>
+                <div class="w-24 h-1 bg-water-500 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Fill in your details below and we'll deliver fresh water to your doorstep!</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <!-- Order Form -->
+                <div id="order-form-container" class="bg-water-50 rounded-2xl shadow-lg p-8">
+                    <form id="order-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-water-500 focus:border-water-500 outline-none transition"
+                                placeholder="Enter your name">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-water-500 focus:border-water-500 outline-none transition"
+                                placeholder="Enter 10-digit mobile number">
+                        </div>
+                        
+                        <div>
+                            <label for="pincode" class="block text-sm font-medium text-gray-700 mb-2">Pincode *</label>
+                            <input type="text" id="pincode" name="pincode" required maxlength="6"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-water-500 focus:border-water-500 outline-none transition"
+                                placeholder="Enter your area pincode">
+                            <p id="pincode-error" class="text-red-500 text-sm mt-2 hidden">
+                                Sorry, we currently only deliver within a 5km radius of Kulithalai (639104).
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Delivery Address *</label>
+                            <textarea id="address" name="address" required rows="3"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-water-500 focus:border-water-500 outline-none transition resize-none"
+                                placeholder="Enter your complete delivery address"></textarea>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="product" class="block text-sm font-medium text-gray-700 mb-2">Product *</label>
+                                <select id="product" name="product" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-water-500 focus:border-water-500 outline-none transition">
+                                    <option value="">Select Product</option>
+                                    <option value="300ml Bottle">300ml Water Bottle</option>
+                                    <option value="500ml Bottle">500ml Water Bottle</option>
+                                    <option value="1L Bottle">1 Litre Water Bottle</option>
+                                    <option value="20L Can">20 Litre Water Can</option>
+                                    <option value="Bulk Order">Bulk/Event Order</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="quantity" class="block text-sm font-medium text-gray-700 mb-2">Quantity *</label>
+                                <input type="number" id="quantity" name="quantity" required min="1"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-water-500 focus:border-water-500 outline-none transition"
+                                    placeholder="Enter quantity">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full bg-water-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-water-700 transition shadow-lg">
+                            Proceed to Payment
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Payment & Confirm Section (Hidden by default) -->
+                <div id="payment-container" class="hidden bg-water-50 rounded-2xl shadow-lg p-8">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-water-800 mb-2">Payment & Confirmation</h3>
+                        <p class="text-gray-600">Scan the QR code below to make payment via PhonePe, GPay, or any UPI app</p>
+                    </div>
+
+                    <div class="flex justify-center mb-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <img src="qr-code-cropped.jpg" alt="Scan to Pay" class="w-56 h-56 object-cover rounded-lg">
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 mb-6">
+                        <h4 class="font-bold text-water-800 mb-4">Order Summary</h4>
+                        <div id="order-summary" class="space-y-2 text-sm text-gray-600">
+                            <!-- Order details will be populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <button id="whatsapp-btn" 
+                            class="w-full bg-green-500 text-white py-4 rounded-lg font-bold text-lg hover:bg-green-600 transition shadow-lg flex items-center justify-center space-x-2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            <span>Confirm via WhatsApp</span>
+                        </button>
+                        <button id="new-order-btn" 
+                            class="w-full bg-gray-200 text-gray-700 py-4 rounded-lg font-bold text-lg hover:bg-gray-300 transition">
+                            Place New Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-water-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+                <div class="w-24 h-1 bg-water-400 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-water-700 rounded-xl p-6">
+                    <div class="flex items-start space-x-4">
+                        <svg class="w-8 h-8 text-water-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Visit Us</h3>
+                            <p class="text-water-200">No:2, NLR Xerox Shop,<br>Periyapalam, Kulithalai - 639 104</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-water-700 rounded-xl p-6">
+                    <div class="flex items-start space-x-4">
+                        <svg class="w-8 h-8 text-water-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Call Us</h3>
+                            <p class="text-water-200">
+                                <a href="tel:9751767659" class="hover:text-white transition">97517 67659</a><br>
+                                <a href="tel:8489570809" class="hover:text-white transition">84895 70809</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-water-900 text-water-200 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <svg class="w-8 h-8 text-water-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C12 2 4 10 4 15C4 19.4183 7.58172 23 12 23C16.4183 23 20 19.4183 20 15C20 10 12 2 12 2Z"/>
+                    </svg>
+                    <span class="text-xl font-bold text-white">NLR Water</span>
+                </div>
+                <div class="text-center md:text-right">
+                    <p>&copy; 2024 NLR Mineral Water Supply. All rights reserved.</p>
+                    <p class="text-sm mt-1">Serving Kulithalai & surrounding areas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Order Form Handling
+        const orderForm = document.getElementById('order-form');
+        const orderFormContainer = document.getElementById('order-form-container');
+        const paymentContainer = document.getElementById('payment-container');
+        const pincodeInput = document.getElementById('pincode');
+        const pincodeError = document.getElementById('pincode-error');
+        const orderSummary = document.getElementById('order-summary');
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        const newOrderBtn = document.getElementById('new-order-btn');
+
+        let orderData = {};
+
+        // Pincode validation on blur
+        pincodeInput.addEventListener('blur', () => {
+            validatePincode();
+        });
+
+        // Pincode validation on input (clear error)
+        pincodeInput.addEventListener('input', () => {
+            if (pincodeError.classList.contains('hidden') === false) {
+                pincodeError.classList.add('hidden');
+                pincodeInput.classList.remove('border-red-500');
+            }
+        });
+
+        function validatePincode() {
+            const pincode = pincodeInput.value.trim();
+            if (pincode !== '639104') {
+                pincodeError.classList.remove('hidden');
+                pincodeInput.classList.add('border-red-500');
+                return false;
+            }
+            return true;
+        }
+
+        orderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Validate pincode before proceeding
+            if (!validatePincode()) {
+                pincodeInput.focus();
+                return;
+            }
+
+            // Collect form data
+            orderData = {
+                name: document.getElementById('name').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                pincode: document.getElementById('pincode').value.trim(),
+                address: document.getElementById('address').value.trim(),
+                product: document.getElementById('product').value,
+                quantity: document.getElementById('quantity').value
+            };
+
+            // Display order summary
+            orderSummary.innerHTML = `
+                <div class="flex justify-between">
+                    <span>Customer:</span>
+                    <span class="font-medium">${orderData.name}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Phone:</span>
+                    <span class="font-medium">${orderData.phone}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Product:</span>
+                    <span class="font-medium">${orderData.product}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Quantity:</span>
+                    <span class="font-medium">${orderData.quantity}</span>
+                </div>
+                <div class="border-t pt-2 mt-2">
+                    <span class="block mb-1">Delivery Address:</span>
+                    <span class="text-gray-700">${orderData.address}, ${orderData.pincode}</span>
+                </div>
+            `;
+
+            // Hide form, show payment section
+            orderFormContainer.classList.add('hidden');
+            paymentContainer.classList.remove('hidden');
+        });
+
+        // WhatsApp button handler
+        whatsappBtn.addEventListener('click', () => {
+            const phoneNumber = '919751767659';
+            
+            const message = `*New Water Order*%0A%0A` +
+                `*Name:* ${orderData.name}%0A` +
+                `*Phone:* ${orderData.phone}%0A` +
+                `*Product:* ${orderData.product}%0A` +
+                `*Quantity:* ${orderData.quantity}%0A` +
+                `*Address:* ${orderData.address}%0A` +
+                `*Pincode:* ${orderData.pincode}%0A%0A` +
+                `I have made the payment via UPI. Please confirm my order. Thank you!`;
+
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // New Order button handler
+        newOrderBtn.addEventListener('click', () => {
+            // Reset form
+            orderForm.reset();
+            orderData = {};
+            
+            // Hide payment section, show form
+            paymentContainer.classList.add('hidden');
+            orderFormContainer.classList.remove('hidden');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
